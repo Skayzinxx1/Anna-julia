@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Para o Amor da Minha Vida 💙</title>
+  
+  <!-- Fonte romântica e delicada -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px 100px; /* Espaçamento extra no fundo */
+      background: linear-gradient(135deg, #6fb1fc, #4364f7, #4e54c8);
+      background-size: 400% 400%;
+      animation: backgroundAnimation 15s ease infinite;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+      min-height: 100vh; /* Altura mínima para ocupar toda a tela */
+      overflow-x: hidden;
+      overflow-y: auto; /* Permite rolagem vertical */
+    }
+
+    @keyframes backgroundAnimation {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .spotify-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    iframe {
+      border-radius: 12px;
+    }
+
+    .slider {
+      width: 250px;
+      height: 350px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px white;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .contador {
+      font-size: 22px;
+      margin-top: 10px;
+    }
+
+    .texto {
+      font-family: 'Dancing Script', cursive;
+      font-size: 28px;
+      max-width: 750px;
+      color: #fff;
+      line-height: 1.8;
+      text-align: left;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .texto p {
+      margin-bottom: 20px;
+    }
+
+    .texto strong {
+      font-size: 32px;
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      color: pink;
+      font-size: 20px;
+      animation: fall 6s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    #audio-player {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Corações caindo -->
+  <script>
+    function criarCoracao() {
+      const coracao = document.createElement("div");
+      coracao.classList.add("heart");
+      coracao.textContent = "💖";
+      coracao.style.left = Math.random() * 100 + "vw";
+      coracao.style.fontSize = Math.random() * 10 + 20 + "px";
+      document.body.appendChild(coracao);
+      setTimeout(() => coracao.remove(), 6000);
+    }
+    setInterval(criarCoracao, 300);
+  </script>
+
+  <!-- Áudio com autoplay -->
+  <audio id="audio-player" autoplay>
+    <source src="https://p.scdn.co/mp3-preview/f212a0c71eae5bc8e161038d7b7b0a1e9dd24542?cid=d8a5ed958d274c2e8ee717e6a4b0971d" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div class="spotify-container">
+    <iframe 
+      src="https://open.spotify.com/embed/track/1DLKuppSYytOuxhtI6KBGu?utm_source=generator"
+      width="300" height="80" frameBorder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <div class="slider">
+    <img id="slide" src="img/img1.png" alt="Foto do casal">
+  </div>
+
+  <div class="contador" id="contador"></div>
+
+  <div class="texto">
+    <p><strong>Amor,</strong></p>
+
+    <p>Às vezes paro pra pensar em como tudo começou... e meu coração se enche de gratidão. Lembro direitinho daquele dia na igreja Santa Terezinha, eu trabalhando com o brinquedo inflável, e você chegando com esse seu jeitinho encantador. Quando começamos a conversar, eu já senti que algo especial tava acontecendo. Você me deu um abraço, riu comigo, até elogiou minha bunda (uiui!), e eu ali, meio bobo, mas já encantado.</p>
+
+    <p>Pedir seu insta foi uma das melhores decisões da minha vida, porque ali começou tudo. Depois veio nosso primeiro selinho, e eu segurando o choro quando ganhei aquele buquê no Catiguá... tava morrendo de vergonha, mas por dentro tava explodindo de felicidade.</p>
+
+    <p>A gente se falava todo dia — e ainda se fala — como se o tempo nunca fosse suficiente pra tudo o que queremos dividir. Lembro da nossa primeira vez na praça, depois naquele trem abandonado... foram momentos simples, mas que significaram tudo pra mim.</p>
+
+    <p>Desde o primeiro dia, eu me apaixonei por você. Pelo seu olhar, pelo seu jeito, pelo que você é. A gente tá construindo algo lindo, cheio de amor, parceria e momentos que vão ficar pra sempre no meu coração.</p>
+
+    <p>Obrigado por tudo, meu amor. Por cada riso, cada carinho, cada instante ao seu lado. Eu te amo demais, eu amo te amar juju 💙</p>
+  </div>
+
+  <script>
+    // Contador
+    const dataInicio = new Date("2025-01-01T00:00:00");
+
+    function atualizarContador() {
+      const agora = new Date();
+      let diff = agora - dataInicio;
+
+      const segundosTotais = Math.floor(diff / 1000);
+      const minutosTotais = Math.floor(segundosTotais / 60);
+      const horasTotais = Math.floor(minutosTotais / 60);
+      const diasTotais = Math.floor(horasTotais / 24);
+
+      const meses = Math.floor(diasTotais / 30);
+      const dias = diasTotais % 30;
+      const horas = horasTotais % 24;
+      const minutos = minutosTotais % 60;
+      const segundos = segundosTotais % 60;
+
+      document.getElementById("contador").innerHTML =
+        `💖 Eu te amo há: ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
+    }
+
+    atualizarContador();
+    setInterval(atualizarContador, 1000);
+
+    // Carrossel
+    const imagens = [
+      "img/img1.png",
+      "img/img2.png",
+      "img/img3.png",
+      "img/img4.png",
+      "img/img5.png",
+      "img/img6.png",
+      "img/img7.png"
+    ];
+
+    let index = 0;
+    const slide = document.getElementById("slide");
+
+    setInterval(() => {
+      index = (index + 1) % imagens.length;
+      slide.src = imagens[index];
+    }, 3000);
+  </script>
+
+</body>
+</html>

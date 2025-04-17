@@ -1,0 +1,90 @@
+body {
+    background-color: rgb(56, 128, 187); 
+    margin: 0;
+    padding: 40px 20px 100px; /* Espaçamento extra no fundo */
+    background: linear-gradient(135deg, #6fb1fc, #4364f7, #4e54c8);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 15s ease infinite;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    min-height: 100vh; /* A altura mínima ainda é a altura da tela */
+    overflow-x: hidden;
+    overflow-y: auto; /* Habilita o scroll vertical */
+    padding: 20%;
+}
+
+.slider {
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem de maneira bonitinha */
+    border-radius: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+@media screen and (max-width: 1200px) {
+    .texto {
+      font-size: 24px; /* Ajusta o tamanho da fonte para telas médias */
+    }
+  
+    .slider {
+      width: 80%;  /* Ajusta a largura do slider para telas menores */
+      height: 250px;
+    }
+  
+    .contador {
+      font-size: 20px;
+    }
+  }
+  
+  /* Para telas pequenas (como tablets e celulares) */
+  @media screen and (max-width: 768px) {
+    .spotify-container iframe {
+      width: 100%;  /* Torna o iframe do Spotify 100% da largura da tela */
+    }
+  
+    .slider {
+      width: 90%;  /* Ajusta a largura do slider para ser mais responsivo */
+      height: 200px;  /* Ajusta a altura do slider */
+    }
+  
+    .texto {
+      font-size: 20px;  /* Reduz o tamanho da fonte para dispositivos móveis */
+      max-width: 90%;  /* Faz com que o texto ocupe 90% da largura da tela */
+      padding: 15px;
+    }
+  
+    .contador {
+      font-size: 18px;
+    }
+  }
+  
+  /* Para telas muito pequenas (como smartphones em modo retrato) */
+  @media screen and (max-width: 480px) {
+    body {
+      padding: 10px; /* Reduz o padding para caber melhor em telas pequenas */
+    }
+  
+    .texto {
+      font-size: 18px;  /* Ajusta ainda mais o tamanho da fonte para dispositivos pequenos */
+      max-width: 100%;  /* O texto ocupa toda a largura da tela */
+    }
+  
+    .slider {
+      width: 100%;  /* Ajusta o slider para ocupar toda a tela */
+      height: 180px;  /* Ajusta a altura do slider */
+    }
+  
+    .contador {
+      font-size: 16px;
+    }
+  }
