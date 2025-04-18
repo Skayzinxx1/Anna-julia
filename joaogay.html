@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Para o Amor da Minha Vida 💙</title>
-  
-  <!-- Fonte romântica e delicada -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <!-- Fonte personalizada -->
+  <style>
+    @font-face {
+      font-family: 'ForMyFunGirlies';
+      src: url('for_my_fun_girlies.ttf') format('truetype');
+    }
+  </style>
 
   <style>
     body {
       margin: 0;
-      padding: 40px 20px 100px; /* Espaçamento extra no fundo */
+      padding: 40px 20px 100px;
       background: linear-gradient(135deg, #6fb1fc, #4364f7, #4e54c8);
       background-size: 400% 400%;
       animation: backgroundAnimation 15s ease infinite;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'ForMyFunGirlies', cursive;
       color: white;
       display: flex;
       justify-content: center;
@@ -22,9 +27,9 @@
       flex-direction: column;
       text-align: center;
       gap: 20px;
-      min-height: 100vh; /* Altura mínima para ocupar toda a tela */
+      min-height: 100vh;
       overflow-x: hidden;
-      overflow-y: auto; /* Permite rolagem vertical */
+      overflow-y: auto;
     }
 
     @keyframes backgroundAnimation {
@@ -63,18 +68,25 @@
       transition: opacity 0.5s ease-in-out;
     }
 
+    .nomes {
+      font-size: 36px;
+      font-family: 'ForMyFunGirlies', cursive;
+      margin-top: 10px;
+      color: white;
+    }
+
     .contador {
       font-size: 22px;
       margin-top: 10px;
     }
 
     .texto {
-      font-family: 'Dancing Script', cursive;
+      font-family: 'ForMyFunGirlies', cursive;
       font-size: 28px;
       max-width: 750px;
       color: #fff;
       line-height: 1.8;
-      text-align: left;
+      text-align: center;
       padding: 20px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 20px;
@@ -127,14 +139,22 @@
   </script>
 
   <!-- Áudio com autoplay -->
-  <audio id="audio-player" autoplay>
-    <source src="https://p.scdn.co/mp3-preview/f212a0c71eae5bc8e161038d7b7b0a1e9dd24542?cid=d8a5ed958d274c2e8ee717e6a4b0971d" type="audio/mpeg">
+  <audio id="audio-player" autoplay loop>
+    <source src="https://www.dropbox.com/scl/fi/xy4i4rbi0n32u5t7tlrsw/tribalistas-velha-infancia.mp3?rlkey=3t8mcm7pxbz52cmlqdk4byu58&raw=1" type="audio/mpeg">
     Seu navegador não suporta áudio.
   </audio>
 
+  <script>
+    window.addEventListener("load", () => {
+      const audio = document.getElementById("audio-player");
+      audio.volume = 0.5;
+      audio.play().catch(() => {});
+    });
+  </script>
+
   <div class="spotify-container">
     <iframe 
-      src="https://open.spotify.com/embed/track/1DLKuppSYytOuxhtI6KBGu?utm_source=generator"
+      src="https://open.spotify.com/embed/track/1mSxbLW7fKABfeY4lGpg0E?utm_source=generator"
       width="300" height="80" frameBorder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy">
@@ -145,19 +165,16 @@
     <img id="slide" src="img/img1.png" alt="Foto do casal">
   </div>
 
+  <div class="nomes">ANNA JULIA E MATHEUS</div>
+
   <div class="contador" id="contador"></div>
 
   <div class="texto">
     <p><strong>Amor,</strong></p>
-
     <p>Às vezes paro pra pensar em como tudo começou... e meu coração se enche de gratidão. Lembro direitinho daquele dia na igreja Santa Terezinha, eu trabalhando com o brinquedo inflável, e você chegando com esse seu jeitinho encantador. Quando começamos a conversar, eu já senti que algo especial tava acontecendo. Você me deu um abraço, riu comigo, até elogiou minha bunda (uiui!), e eu ali, meio bobo, mas já encantado.</p>
-
     <p>Pedir seu insta foi uma das melhores decisões da minha vida, porque ali começou tudo. Depois veio nosso primeiro selinho, e eu segurando o choro quando ganhei aquele buquê no Catiguá... tava morrendo de vergonha, mas por dentro tava explodindo de felicidade.</p>
-
     <p>A gente se falava todo dia — e ainda se fala — como se o tempo nunca fosse suficiente pra tudo o que queremos dividir. Lembro da nossa primeira vez na praça, depois naquele trem abandonado... foram momentos simples, mas que significaram tudo pra mim.</p>
-
     <p>Desde o primeiro dia, eu me apaixonei por você. Pelo seu olhar, pelo seu jeito, pelo que você é. A gente tá construindo algo lindo, cheio de amor, parceria e momentos que vão ficar pra sempre no meu coração.</p>
-
     <p>Obrigado por tudo, meu amor. Por cada riso, cada carinho, cada instante ao seu lado. Eu te amo demais, eu amo te amar juju 💙</p>
   </div>
 
@@ -206,6 +223,5 @@
       slide.src = imagens[index];
     }, 3000);
   </script>
-
 </body>
 </html>
