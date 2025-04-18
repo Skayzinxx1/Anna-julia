@@ -19,7 +19,7 @@
       background: linear-gradient(135deg, #6fb1fc, #4364f7, #4e54c8);
       background-size: 400% 400%;
       animation: backgroundAnimation 15s ease infinite;
-      font-family: 'ForMyFunGirlies', cursive;
+      font-family: 'ForMyFunGirlies', cursive, sans-serif; /* Fallback para fontes padrão */
       color: white;
       display: flex;
       justify-content: center;
@@ -30,6 +30,7 @@
       min-height: 100vh;
       overflow-x: hidden;
       overflow-y: auto;
+      font-size: 1.2rem; /* Usar rem para tornar o texto mais escalável */
     }
 
     @keyframes backgroundAnimation {
@@ -119,6 +120,21 @@
 
     #audio-player {
       display: none;
+    }
+
+    /* Ajuste para dispositivos móveis */
+    @media (max-width: 768px) {
+      body {
+        font-size: 1rem; /* Ajusta o tamanho da fonte para dispositivos móveis */
+      }
+
+      .nomes {
+        font-size: 28px; /* Ajusta o tamanho do texto para o nome */
+      }
+
+      .texto {
+        font-size: 24px; /* Ajusta o tamanho do texto da carta */
+      }
     }
   </style>
 </head>
